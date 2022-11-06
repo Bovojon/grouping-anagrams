@@ -74,7 +74,7 @@ public class AnagramServiceTest {
     @Test
     void processAnagrams_nonExistentFile_throws() {
         // given
-        String expectedErrMessage = String.format("Failed opening file: %s", nonExistentFile);
+        String expectedErrMessage = String.format("Failed opening file: %s%n", nonExistentFile);
 
         // then
         assertThrows(RuntimeException.class, () -> anagramService.process(nonExistentFile));
