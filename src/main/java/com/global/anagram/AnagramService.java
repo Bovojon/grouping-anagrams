@@ -40,7 +40,7 @@ public class AnagramService {
             }
             outputAnagrams();
         } catch (IOException ex) {
-            System.out.printf("Failed opening file: %s", fileName);
+            System.out.printf("Failed opening file: %s%n", fileName);
             throw new RuntimeException(ex);
         }
     }
@@ -50,8 +50,8 @@ public class AnagramService {
         for (char ch : word.toCharArray()) {
             int index = ch - 'a';
             if (index<0 || index>25) {
-                System.out.println("Words must only consist of letters.");
-                return;
+                throw new RuntimeException(String.format(
+                        "Words must only consist of letters: %s%n", word));
             }
             trackingArray[index]++;
         }
