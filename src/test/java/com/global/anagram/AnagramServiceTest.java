@@ -84,10 +84,12 @@ public class AnagramServiceTest {
     @Test
     void processAnagrams_wordsWithNumbers_throws() {
         // given
-        String expectedErrMessage = "Words must only consist of letters.";
+        String expectedErrMessage = String.format("Words must only consist of letters.%n");
+
+        // when
+        anagramService.process(numberFile);
 
         // then
-        assertThrows(RuntimeException.class,
-                () -> anagramService.process(numberFile), expectedErrMessage);
+        assertEquals(expectedErrMessage, outContent.toString());
     }
 }
