@@ -41,10 +41,11 @@ chmod u+x ./run.sh
 
 ## With more time...
 If I had more time, I would consider the following:
-* Using Kafka to process the anagrams in real-time as the file is being read.
+* Use Kafka to process the anagrams in real-time as the file is being read.
 * Add check style (`jacoco`) to make sure code is clean.
 * Add better logging with Lombok instead of `System.out`.
 * Add a better way of handling paths to test files and keep `Data` in `resources`.
+* Use Mockito to improve tests so we mock the File IO operations.
 
 ## Assumptions
 The following assumptions were made:
