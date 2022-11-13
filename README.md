@@ -46,6 +46,7 @@ If I had more time, I would consider the following:
 * Add better logging with Lombok instead of `System.out`.
 * Add a better way of handling paths to test files and keep `Data` in `resources`.
 * Use Mockito to improve tests so we mock the File IO operations.
+* Add multithreading.
 
 ## Assumptions
 The following assumptions were made:
